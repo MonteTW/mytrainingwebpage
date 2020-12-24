@@ -1,0 +1,94 @@
+body{
+      margin:0px;
+      font-size:20px;
+      font-family:noto sans, arial;
+}
+
+nav>.brand{
+      text-align: center;
+      font-size: 200%;
+      padding-top: 10px;padding-bottom: 10px;
+      font-family:"Lobster", cursive;
+}
+/* 螢幕尺寸寬度大於800像素的MENU */
+
+nav>.menu{
+      display:flex;
+      justify-content: center;
+      margin-bottom: 10px;      
+}
+nav>.menu>.item{
+      font-size: 0.8em;
+      margin:2px 50px;
+      color:#222222;
+      text-shadow: 0px 0px 5px white;
+      cursor:pointer;
+      transition:transform 0.3s;
+}
+nav>.menu>.item:hover{
+      transform:scale(1.2,1.2);
+      color:black;
+}
+/* 螢幕尺寸寬度小於800像素的手機MENU */
+nav>.mobile-menu{
+      position:fixed;left:0px;top:0px;
+      width:100%;height:100%;
+      background-color:rgba(255,255,255,0.8);
+      text-align: center;
+      display:none;
+}
+nav>.mobile-menu>.item{
+      font-size:0.9em;
+      margin:40px;
+      cursor:pointer;
+}
+nav>.mobile-menu>.close{
+      position:absolute;top:10px;right:10px;
+      cursor:pointer;
+}
+nav>.mobile-menu-trigger{
+      display:none;justify-content: flex-end;
+      margin-bottom:10px;
+      margin-right:20px;
+}
+nav>.mobile-menu-trigger>.lines{
+      width:40px;
+}
+nav>.mobile-menu-trigger>.lines>.line{
+      height:2px;
+      background-color: black;
+      margin:5px 0px;
+}
+nav>.welcome{
+      height:800px;
+      background-image:url(bg.jpg);
+      background-size:cover;
+      font-size: 3em;
+      line-height: 1.25em;
+      letter-spacing: 5px;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      text-align: center;
+      background-attachment:fixed;  
+}
+/* 螢幕尺寸寬度小於800像素 */
+@media (max-width:800px){
+      nav>.welcome{
+            height:600px;
+            background-position:50% center;
+            font-size:2em;
+            line-height: 1em;
+      }
+      nav>.brand{
+            font-size: 150%;
+            padding-top: 10px;padding-bottom: 5px;
+      }
+      nav>.menu{
+            display:none;                        
+      }
+      nav>.mobile-menu-trigger{
+            display:flex;
+      }
+      
+}

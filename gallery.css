@@ -1,0 +1,152 @@
+section.gallery{
+      display:flex;
+      justify-content:center;
+      padding:40px 0px;
+
+}
+section.gallery>.col{
+      width:450px;margin:20px;
+}
+/* section.gallery>.col>.picture */
+section.gallery>.col>.picture{
+      width:100%;height:500px;
+      text-align:center;color:#ffffff;
+}
+section.gallery>.col>.picture-1{
+      background-image:url(gallery-1.jpg);
+      background-size: cover;
+}
+
+section.gallery>.col>.picture-2{
+      background-image:url(gallery-2.jpg);
+      background-size: cover;
+}
+/* section.gallery>.col>.text */
+section.gallery>.col>.text{
+      box-sizing:border-box;
+      width:100%;height:300px;
+      text-align:center;color:#000000;
+      border:4px solid #000000;
+      line-height: 0.9em;
+}
+/* section.gallery>.col>.block */
+section.gallery>.col>.block{
+      margin-bottom: 40px;
+      display:flex;align-items:center;justify-content: center;
+}
+section.gallery>.col>.block>.words{
+      width:100%;
+}
+section.gallery>.col>.block>.words>.title{
+      font-family:"Lobster", cursive;
+      font-size: 2em;font-weight: bold;
+      margin-bottom: 30px;
+}
+section.gallery>.col>.block>.words>.content{
+      font-size:1.5em;margin-bottom: 30px;
+}
+section.gallery>.col>.block>.words>.action>.btn{
+      font-size:0.8em;border:1px solid white;
+      background-color:rgba(0,0,0,0.4);
+      padding:10px 20px;
+      cursor:pointer;
+      transition:background-color 0.3s;
+}
+section.gallery>.col>.block>.words>.action>.btn:hover{
+      background-color:rgba(0,0,0,0.2);
+}
+/* section.news> */
+section.news{
+      display:flex;
+      justify-content:center;
+}
+section.news>.box>.block{
+      display:flex;
+      box-sizing:border-box;
+      width:900px;height:300px;
+      border:0.7px solid lightgrey;
+      margin-bottom:40px;
+}
+section.news>.box>.block>.picture{
+      opacity:0.7;
+      transition:opacity 0.3s;
+}
+section.news>.box>.block>.picture:hover{
+      opacity:1.0;
+}
+section.news>.box>.block>.picture-1{
+      background-image:url(article-1.jpg);
+      background-size: cover;
+      width:50%;     
+}
+section.news>.box>.block>.picture-2{
+      background-image:url(article-2.jpg);
+      background-size: cover;
+      width:50%;     
+}
+section.news>.box>.block>.article{
+      text-align:left;
+      padding:30px;      
+}
+section.news>.box>.block>.article>.newstitle{
+      font-size: 1.5em;
+      padding-bottom:20px;
+}
+section.news>.box>.block>.article>.newscontent{
+      font-size: 0.8em;
+      padding-bottom:20px;
+      color: lightgrey;
+}
+section.news>.box>.block>.article>.line{
+      height:0.8px;
+      background-color:grey;
+      margin-bottom: 15px;
+}
+section.news>.box>.block>.article>.social{
+      display:flex;
+      text-align:left;
+      color:grey;
+}
+section.news>.box>.block>.article>.social>.extra{
+      color:grey;
+      margin:10px;
+      
+}
+/* section.end> */
+section.end{
+      background-color: black;
+      color:white;
+      font-size: 0.7em;
+      padding:30px;
+      text-align: center;
+      letter-spacing: 0.5px;
+}
+/* 螢幕尺寸寬度小於800像素 */
+@media (max-width:800px){
+      section.gallery{
+            flex-wrap:wrap;            
+      }
+      section.gallery>.col{
+            width:90%;margin:10px 0px;
+      }
+      section.gallery>.col:last-child{
+            display:flex;flex-direction:column-reverse;
+      }
+      section.news{
+            display:block;
+            justify-content:center;
+            margin:0px 30px;            
+      }
+      section.news>.box>.block{
+            flex-wrap:wrap;
+            width:100%;height:500px;            
+      }
+      section.news>.box>.block>.picture{
+            height:50%;width:100%;
+            
+      }
+      section.news>.box>.block>.article{
+            font-size:0.8em;width:50%;
+            
+      }
+}
